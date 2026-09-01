@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #0a0e1a;
+  --color-surface: #111827;
+  --color-border: #1f2937;
+  --color-accent: #3b82f6;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  --color-critical: #dc2626;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: #e5e7eb;
+  font-family: 'Inter', system-ui, sans-serif;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #111827;
+}
+::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4b5563;
+}
+
+/* Pulse animation for fraud rings */
+@keyframes ring-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.ring-pulse {
+  animation: ring-pulse 1.5s ease-in-out infinite;
+}
+
+/* Score badge animations */
+@keyframes score-flash {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.score-flash {
+  animation: score-flash 0.3s ease-in-out;
+}
+
+/* Scrolling ticker */
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
